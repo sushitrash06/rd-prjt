@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import { Provider } from 'react-redux';
 import './index.css';
+import { BrowserRouter } from 'react-router-dom';
+// import App from './pages/App';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+// import store,{history} from './config/Redux/store'
+// import { ConnectedRouter } from 'connected-react-router';
 ReactDOM.render(
   <React.StrictMode>
+    <BrowserRouter>
+    {/* <Provider store={store}>
+    <ConnectedRouter history={history}> */}
     <App />
+    {/* </ConnectedRouter>
+    </Provider> */}
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -15,3 +25,4 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
