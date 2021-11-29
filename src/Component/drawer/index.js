@@ -232,6 +232,11 @@ export default function PersistentDrawerLeft() {
                     }}>
                     <ListItemText primary="Barang Keluar" />
                     </ListItem>
+                    <ListItem onClick={()=>{
+                      history.push('/penyimpanan/stock-opname')
+                    }}>
+                    <ListItemText primary="Stock Opname" />
+                    </ListItem>
                   </List>
                 </AccordionDetails>
               </Accordion>
@@ -251,28 +256,10 @@ export default function PersistentDrawerLeft() {
                 <AccordionDetails>
                 <List>
                     <ListItem>
-                    <ListItemIcon>
-                      <Icon icon="bx:bxs-dashboard"/>
-                    </ListItemIcon>
-                    <ListItemText primary="Dashboard" />
+                    <ListItemText primary="Dari Gudang ke Store" />
                     </ListItem>
                     <ListItem>
-                    <ListItemIcon>
-                      <Icon icon="bx:bxs-dashboard"/>
-                    </ListItemIcon>
-                    <ListItemText primary="Dashboard" />
-                    </ListItem>
-                    <ListItem>
-                    <ListItemIcon>
-                      <Icon icon="bx:bxs-dashboard"/>
-                    </ListItemIcon>
-                    <ListItemText primary="Dashboard" />
-                    </ListItem>
-                    <ListItem>
-                    <ListItemIcon>
-                      <Icon icon="bx:bxs-dashboard"/>
-                    </ListItemIcon>
-                    <ListItemText primary="Dashboard" />
+                    <ListItemText primary="Dari Store ke Store" />
                     </ListItem>
                   </List>
                 </AccordionDetails>

@@ -7,6 +7,7 @@ import FormPenjualanOffice from '../../page/FormPenjualan';
 import Pembelian from '../../page/pembelian';
 import BarangMasuk from '../../page/penyimpaan/BarangMasuk';
 import BarangKeluar from '../../page/penyimpaan/BarangKeluar';
+import StockOpname from '../../page/penyimpaan/StockOpname';
 
 // const PrivateRoute = ({ component: Component, ...rest }) => {
 // 	const accessToken = localStorage.getItem("DMDSHBTOKEN");
@@ -32,6 +33,7 @@ function Routes() {
         <Route exact path='/penjualan-office' component={PenjualanOffice}/>
         <Route exact path='/penyimpanan/barang-masuk' component={BarangMasuk}/>
         <Route exact path='/penyimpanan/barang-keluar' component={BarangKeluar}/>
+        <Route exact path='/penyimpanan/stock-opname' component={StockOpname}/>
         <Route exact path='/pembelian' component={Pembelian}/>
         <Route exact path='/penjualan-store/detail' component={FormPenjualanOffice}/>
       </Switch>

@@ -13,122 +13,115 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import EditIcon from "@mui/icons-material/Edit";
 // import FormPembelian from "../FormPembelian";
 
-export default function BarangKeluar() {
-    const columns = [
-        { field: "id", headerName: "ID", width: 100 },
-        {
-          field: "TanggalTransaksi",
-          headerName: "Tanggal Transaksi",
-          width: 200,
-          editable: true,
-        },
-        {
-            field: 'IDStore',
-            headerName: 'ID Store',
-            // type: 'number',
-            width: 200,
-            editable: true,
-          },
-          {
-            field: 'LokasiStore',
-            headerName: 'Lokasi Office',
-            // description: 'This column has a value getter and is not sortable.',
-            sortable: true,
-            width: 200,
-          },
-        {
-          field: "Artikel",
-          headerName: "Artikel",
-          width: 150,
-          editable: true,
-        },
-        {
-          field: "Kategori",
-          headerName: "Kategori",
-          width: 150,
-          editable: true,
-        },
-        {
-          field: "tipe",
-          headerName: "Tipe",
-          width: 150,
-          editable: true,
-        },
-        {
-          field: "NamaBarang",
-          headerName: "Nama Barang",
-          width: 150,
-          editable: true,
-        },
-        {
-          field: "Kualitas",
-          headerName: "Kuantitas",
-          // description: 'This column has a value getter and is not sortable.',
-          sortable: true,
-          width: 140,
-        },
-        {
-          field: "ukuran",
-          headerName: "Ukuran",
-          // description: 'This column has a value getter and is not sortable.',
-          sortable: true,
-          width: 130,
-        },
-        {
-          field: "TotalHPP",
-          headerName: "HPP",
-          // description: 'This column has a value getter and is not sortable.',
-          sortable: true,
-          width: 160,
-        },
-      {
-        field: "Total",
-        headerName: "Total",
+export default function StockOpname() {
+  const columns = [
+    { field: "id", headerName: "ID", width: 100 },
+    {
+      field: "TanggalTransaksi",
+      headerName: "Tanggal Transaksi",
+      width: 200,
+      editable: true,
+    },
+    {
+      field: "Artikel",
+      headerName: "Artikel",
+      width: 150,
+      editable: true,
+    },
+    {
+      field: "Kategori",
+      headerName: "Kategori",
+      width: 150,
+      editable: true,
+    },
+    {
+      field: "tipe",
+      headerName: "Tipe",
+      width: 150,
+      editable: true,
+    },
+    {
+      field: "NamaBarang",
+      headerName: "Nama Barang",
+      width: 150,
+      editable: true,
+    },
+    {
+      field: "Kualitas",
+      headerName: "Kuantitas Masuk",
+      // description: 'This column has a value getter and is not sortable.',
+      sortable: true,
+      width: 140,
+    },
+    {
+        field: "Kualitas",
+        headerName: "Kuantitas Keluar",
         // description: 'This column has a value getter and is not sortable.',
         sortable: true,
         width: 140,
       },
-      {
-        field: "keterangan",
-        headerName: "Keterangan",
+    {
+      field: "ukuran",
+      headerName: "Ukuran",
+      // description: 'This column has a value getter and is not sortable.',
+      sortable: true,
+      width: 130,
+    },
+    {
+        field: "TotalHPP",
+        headerName: "HPP",
         // description: 'This column has a value getter and is not sortable.',
         sortable: true,
         width: 160,
       },
-        {
-          field: "Action",
-          headerName: "Action",
-          // description: 'This column has a value getter and is not sortable.',
-          sortable: false,
-          width: 120,
-          renderCell: () => {
-            return (
-              <div style={{ display: "flex" }}>
-                <Button
-                  style={{
-                    color: "black",
-                    textTransform: "capitalize",
-                  }}
-                  startIcon={<EditIcon />}
-                  onClick={() => {
-                    setOpenDetail(true);
-                  }}
-                />
-                <Button
-                  style={{
-                    color: "black",
-                    textTransform: "capitalize",
-                  }}
-                  startIcon={<RemoveRedEyeOutlinedIcon />}
-                  onClick={() => {
-                    setOpenDetail(true);
-                  }}
-                />
-              </div>
-            );
-          },
-        },
-      ];
+    {
+      field: "Total",
+      headerName: "Total",
+      // description: 'This column has a value getter and is not sortable.',
+      sortable: true,
+      width: 140,
+    },
+    {
+      field: "keterangan",
+      headerName: "Keterangan",
+      // description: 'This column has a value getter and is not sortable.',
+      sortable: true,
+      width: 160,
+    },
+    {
+      field: "Action",
+      headerName: "Action",
+      // description: 'This column has a value getter and is not sortable.',
+      sortable: false,
+      width: 120,
+      renderCell: () => {
+        return (
+          <div style={{ display: "flex" }}>
+            <Button
+              style={{
+                color: "black",
+                textTransform: "capitalize",
+              }}
+              startIcon={<EditIcon />}
+              onClick={() => {
+                setOpenDetail(true);
+              }}
+            />
+            <Button
+              style={{
+                color: "black",
+                textTransform: "capitalize",
+              }}
+              startIcon={<RemoveRedEyeOutlinedIcon />}
+              onClick={() => {
+                setOpenDetail(true);
+              }}
+            />
+          </div>
+        );
+      },
+    },
+  ];
   const [openDetail, setOpenDetail] = React.useState(false);
   return (
     <div style={{ marginTop: "50px" }} align="left">
@@ -139,7 +132,7 @@ export default function BarangKeluar() {
           display: "flex",
         }}
       >
-        <h1>Penyimpanan Barang Keluar</h1>
+        <h1>Stock Opname</h1>
         <div
           style={{
             position: "absolute",

@@ -1,4 +1,4 @@
 import BarangKeluar from "./BarangKeluar";
 import BarangMasuk from "./BarangMasuk";
-
-export default {BarangKeluar,BarangMasuk}
+import StockOpname from "./StockOpname";
+export default {BarangKeluar,BarangMasuk,StockOpname}
